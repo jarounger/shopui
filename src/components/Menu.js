@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from './logo.svg';
+import { SignalWifi1BarLockSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
+    primary: '#FFFFFFF'
   },
   color: {
     background: '#ffffff',
@@ -38,8 +40,8 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="black" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
+          <Typography variant="h1" className={classes.title}>
+            E-Commerce App
           </Typography>
           <Button><img className={classes.size} src={logo} /></Button>
         </Toolbar>
