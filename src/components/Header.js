@@ -4,30 +4,19 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Drawer from './Drawer';
 import logo from './logo.svg';
-import { SignalWifi1BarLockSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 2,
+    flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
-    primary: '#FFFFFFF'
   },
-  color: {
-    background: '#ffffff',
-  },
-  size: {
-    height: '30px',
-    width:  '30px',
-  },
-
 }));
 
 export default function ButtonAppBar() {
@@ -35,15 +24,13 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.color}>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="black" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h1" className={classes.title}>
+        <Drawer />
+          <Typography variant="h6" className={classes.title}>
             E-Commerce App
           </Typography>
-          <Button><img className={classes.size} src={logo} /></Button>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>

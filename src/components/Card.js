@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import logo from './logo.svg';
 import Grid from '@material-ui/core/Grid';
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -28,10 +27,10 @@ export default function FullWidthGrid() {
             <Grid container spacing={3}>
 
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={8} sm={5}>
                     <Card className={classes.paper}>
                         <CardContent>
-                            <img className={classes.size} src={logo} />
+                            <img alt="logo" src={logo} />
                             <Typography gutterBottom variant="h5" component="h2">
                                 T-Shirt
                             </Typography>
@@ -40,16 +39,16 @@ export default function FullWidthGrid() {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small">Learn More</Button>
+                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
                         </CardActions>
                     </Card>
                 </Grid>
 
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={8} sm={5}>
                     <Card className={classes.paper}>
                         <CardContent>
-                            <img className={classes.size} src={logo} />
+                            <img alt="logo" src={logo} />
                             <Typography gutterBottom variant="h5" component="h2">
                                 T-Shirt
                             </Typography>
@@ -58,7 +57,7 @@ export default function FullWidthGrid() {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small">Learn More</Button>
+                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
                         </CardActions>
                     </Card>
                 </Grid>
