@@ -7,6 +7,8 @@ import Drawer from './Drawer';
 import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -20,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function useHeader() {
   const classes = useStyles();
   const icon = <img alt='logo' className={classes.size} src={logo} />;
 
