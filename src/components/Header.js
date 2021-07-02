@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import Drawer from './Drawer';
 import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
-import Card from './Card'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,9 +20,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function Header() {
   const classes = useStyles();
-
   const icon = <img alt='logo' className={classes.size} src={logo} />;
 
   return (
@@ -37,7 +35,6 @@ export default function ButtonAppBar() {
            <Badge color="secondary" badgeContent={1}>
             {icon}
           </Badge>
-
         </Toolbar>
       </AppBar>
     </div>

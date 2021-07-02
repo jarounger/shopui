@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import logo from './logo.svg';
-import Grid from '@material-ui/core/Grid';
+import Badge from '@material-ui/core/Badge';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,92 +19,30 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FullWidthGrid() {
+export default function Artikel() {
     const classes = useStyles();
-
+    const icon = <img alt='logo' className={classes.size} src={logo} />;
     const [count, setCount] = React.useState(1);
-  
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-
-
-                <Grid item xs>
-                    <Card className={classes.paper}>
-                        <CardContent>
-                            <img alt="logo" src={logo} />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                T-Shirt
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                15.00 €
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="secondary" variant='contained' onClick={() => {setCount(count + 1);}}>In den Warenkorb</Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                <Grid item xs>
-                    <Card className={classes.paper}>
-                        <CardContent>
-                            <img alt="logo" src={logo} />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                T-Shirt
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                15.00 €
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                <Grid item xs>
-                    <Card className={classes.paper}>
-                        <CardContent>
-                            <img alt="logo" src={logo} />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                T-Shirt
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                15.00 €
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-                <Grid item xs>
-                    <Card className={classes.paper}>
-                        <CardContent>
-                            <img alt="logo" src={logo} />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                T-Shirt
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                15.00 €
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-
-
-
-            </Grid>
+            <Card className={classes.paper}>
+                <CardContent>
+                    <img alt="logo" src={logo} />
+                    <Typography gutterBottom variant="h5" component="h2">
+                        T-Shirt
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        15.00 €
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button size="small" color="secondary" variant='contained' onClick={() => { setCount(count + 1); }}>In den Warenkorb</Button>
+                    <Badge color="secondary" badgeContent={count}>
+                        {icon}
+                    </Badge>
+                </CardActions>
+            </Card>
         </div>
     );
 }
