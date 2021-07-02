@@ -7,8 +7,6 @@ import Drawer from './Drawer';
 import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
