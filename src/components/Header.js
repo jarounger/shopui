@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Drawer from './Drawer';
 import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
+import useCounter from './useCounter'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,9 +22,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function useHeader() {
+export default function Header() {
   const classes = useStyles();
   const icon = <img alt='logo' className={classes.size} src={logo} />;
+
+  const [counter] = useCounter();
 
   return (
     <div className={classes.root}>
@@ -32,7 +36,7 @@ export default function useHeader() {
            <Typography variant="h6" className={classes.title}>
             E-Commerce App
            </Typography>
-           <Badge color="secondary" badgeContent={1}>
+           <Badge color="secondary" badgeContent={counter}>
             {icon}
           </Badge>
         </Toolbar>
