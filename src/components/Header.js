@@ -8,8 +8,7 @@ import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
 import useCounter from './useCounter'
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     flexGrow: 1,
   },
@@ -20,13 +19,12 @@ const useStyles = makeStyles((theme) => ({
     height: '30px',
     width: '30px',
   },
-}));
+});
 
 export default function Header() {
   const classes = useStyles();
   const icon = <img alt='logo' className={classes.size} src={logo} />;
-
-  const { counter } = useCounter();
+  const {counter} = useCounter();
 
   return (
     <div className={classes.root}>

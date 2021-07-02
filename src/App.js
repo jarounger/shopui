@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Grid from './components/Grid';
 import { Component } from 'react';
 
-
 export default class App extends Component {
   render() {
     return (

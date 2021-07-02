@@ -22,11 +22,9 @@ const useStyles = makeStyles((theme) => ({
 
  export default function SimpleCard() {
     
-    
     const classes = useStyles();
     const icon = <img alt='logo' src={logo} />;
-
-    const { counter, increment } = useCounter();
+    const {counter, increment} = useCounter();
 
     return (
         <div className={classes.root}>
