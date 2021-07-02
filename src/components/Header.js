@@ -26,7 +26,7 @@ export default function Header() {
   const classes = useStyles();
   const icon = <img alt='logo' className={classes.size} src={logo} />;
 
-  const [counter] = useCounter();
+  const { counter } = useCounter();
 
   return (
     <div className={classes.root}>
