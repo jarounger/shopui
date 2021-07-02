@@ -9,8 +9,6 @@ import logo from './logo.svg';
 import Badge from '@material-ui/core/Badge';
 import useCounter from './useCounter'
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -22,11 +20,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SimpleCard() {
+ export default function SimpleCard() {
+    
+    
     const classes = useStyles();
     const icon = <img alt='logo' src={logo} />;
 
-    const [counter, setCounter] = useCounter(1);
+    const { counter, increment } = useCounter();
 
     return (
         <div className={classes.root}>
@@ -41,7 +41,7 @@ export default function SimpleCard() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" color="secondary" variant='contained' onClick={() => { setCounter(counter + 1); }}>In den Warenkorb</Button>
+                    <Button size="small" color="secondary" variant='contained' onClick={increment}>In den Warenkorb</Button>
                     <Badge color="secondary" badgeContent={counter}>
                         {icon}
                     </Badge>
