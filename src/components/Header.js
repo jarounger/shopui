@@ -3,34 +3,41 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import Drawer from './Drawer';
 import logo from './logo.svg';
+import Badge from '@material-ui/core/Badge';
+import Card from './Card'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  color: {
+    background: '#48484A',
   },
-  title: {
-    flexGrow: 1,
+  size: {
+    height: '30px',
+    width: '30px',
   },
 }));
 
 export default function ButtonAppBar() {
   const classes = useStyles();
 
+  const icon = <img alt='logo' className={classes.size} src={logo} />;
+
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.color}>
         <Toolbar>
-        <Drawer />
-          <Typography variant="h6" className={classes.title}>
+          <Drawer />
+           <Typography variant="h6" className={classes.title}>
             E-Commerce App
-          </Typography>
-          <Button color="inherit">Login</Button>
+           </Typography>
+           <Badge color="secondary" badgeContent={1}>
+            {icon}
+          </Badge>
+
         </Toolbar>
       </AppBar>
     </div>

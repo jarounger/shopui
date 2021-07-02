@@ -22,12 +22,33 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthGrid() {
     const classes = useStyles();
 
+    const [count, setCount] = React.useState(1);
+  
+
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
 
 
-                <Grid item xs={8} sm={5}>
+                <Grid item xs>
+                    <Card className={classes.paper}>
+                        <CardContent>
+                            <img alt="logo" src={logo} />
+                            <Typography gutterBottom variant="h5" component="h2">
+                                T-Shirt
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                15.00 €
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="secondary" variant='contained' onClick={() => {setCount(count + 1);}}>In den Warenkorb</Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+
+                <Grid item xs>
                     <Card className={classes.paper}>
                         <CardContent>
                             <img alt="logo" src={logo} />
@@ -45,7 +66,7 @@ export default function FullWidthGrid() {
                 </Grid>
 
 
-                <Grid item xs={8} sm={5}>
+                <Grid item xs>
                     <Card className={classes.paper}>
                         <CardContent>
                             <img alt="logo" src={logo} />
@@ -61,6 +82,28 @@ export default function FullWidthGrid() {
                         </CardActions>
                     </Card>
                 </Grid>
+
+                <Grid item xs>
+                    <Card className={classes.paper}>
+                        <CardContent>
+                            <img alt="logo" src={logo} />
+                            <Typography gutterBottom variant="h5" component="h2">
+                                T-Shirt
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                15.00 €
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="secondary" variant='contained'>In den Warenkorb</Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+
+
+
+
             </Grid>
         </div>
     );
