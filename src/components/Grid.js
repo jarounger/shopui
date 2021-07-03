@@ -1,28 +1,24 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import SimpleCard from './SimpleCard';
-
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-  },
-});
+import Card from './Card';
+import './Grid.css';
 
 export default function AutoGrid() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
+    <div className="root">
       <Grid container spacing={3}>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
+        </Grid>
+        <Grid item xs>
+          <Card />
         </Grid>
       </Grid>
     </div>

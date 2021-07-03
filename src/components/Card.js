@@ -1,28 +1,20 @@
-import * as React from 'react';
-import logo from './logo.svg';
-import './Card.css';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import logo from './logo.svg';
+import './Card.css';
 
 export default function Card() {
-
-    const [count, setCount] = React.useState(1);
-
     return (
         <div className="card">
-            <img
-                alt="logo"
-                src={logo}
-            />
-
-            <Typography gutterBottom variant="h5" component="h2">
+            <img alt="logo" src={logo} />
+            <Typography gutterBottom variant="h5">
                 T-Shirt
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-                15.00 €
+            <Typography variant="h6" color="textSecondary">
+                15.00 EUR
             </Typography>
-
-            <Button size="small" color="secondary" variant='contained' onClick={() => { setCount(count + 1); }}>In den Warenkorb</Button>
+            <Button size='small' color="secondary" variant='contained'>In den Warenkorb</Button>
         </div>
     );
 }
