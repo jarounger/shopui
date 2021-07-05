@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 export default function Header() {
   const classes = useStyles();
   const icon = <img alt='logo' className={classes.size} src={logo} />;
-  const {counter} = useCounter();
+  const {counter, setCounter} = useCounter();
 
   return (
     <div className={classes.root}>
@@ -34,7 +34,7 @@ export default function Header() {
            <Typography variant="h6" className={classes.title}>
             E-Commerce App
            </Typography>
-           <Badge color="secondary" badgeContent={counter}>
+           <Badge color="secondary" badgeContent={setCounter}>
             {icon}
           </Badge>
         </Toolbar>
