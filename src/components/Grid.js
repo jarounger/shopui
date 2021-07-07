@@ -9,16 +9,16 @@ export default function AutoGrid() {
     <div className="root">
       <Grid container spacing={3}>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
         <Grid item xs>
-          <SimpleCard />
+          <Card />
         </Grid>
       </Grid>
     </div>

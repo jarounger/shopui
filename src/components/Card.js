@@ -1,13 +1,13 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import logo from './logo.svg';
+import shirt from './shirt.svg';
 import './Card.css';
 
 export default function Card() {
     return (
         <div className="card">
-            <img alt="logo" src={logo} />
+            <img alt="logo" src={shirt} />
             <Typography gutterBottom variant="h5">
                 T-Shirt
             </Typography>

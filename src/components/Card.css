@@ -2,10 +2,16 @@
   .card {
     flex-grow: 2;
     padding: 15px;
+    background: #FFFFFF;
+    text-align: center;
   }
   
   img {
     height: 100px;
     width: 100px;
   }
+
+
+
+
 
